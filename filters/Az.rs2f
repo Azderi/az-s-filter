@@ -6,7 +6,7 @@ The filter is built around naturally appearing ground-items, meaning it will not
 
 Value tiers should almost never trigger since every unique on the clog have been defined to use the unique sound. Don't worry about gooning sound.
 
-05/07/2025
+12/08/2025
 https://github.com/Azderi/az-s-filter/archive/refs/heads/main.zip";
 }
 
@@ -69,7 +69,7 @@ if (name:"* arrow" && quantity:<3 && value:<3000) HIDDEN
 if (name:"* bolt" && quantity:<3 && value:<3000) HIDDEN
 if (name:"* dart" && quantity:<3 && value:<3000) HIDDEN
 if (name:"Rune arrow" && quantity:<10) HIDDEN
-if (name:"Uncut *" && quantity:<2) F_TIER		//F_TIER -> HIDDEN to hide single gem drops
+if (name:"Uncut *" && quantity:<2) HIDDEN		//F_TIER -> HIDDEN to hide single gem drops
 if (name:"Uncut *") F_TIER
 if (name:"Pure essence" && quantity:<500) HIDDEN
 
@@ -141,7 +141,7 @@ if (name:"Crystal shard") C_TIER
 if (name:"Brimstone key") C_TIER
 TEXT_HIGHLIGHT("Dragonstone bolt*", TRUNE)
 TEXT_HIGHLIGHT("Runite *", TRUNE)
-TEXT_HIGHLIGHT("Dragon bones", "bbaaaaaa")
+if (name:"Dragon bones") BONES
 TEXT_HIGHLIGHT("Coal*", "bb636363")
 if (name:"Tokkul" && quantity:<1000) HIDDEN
 TEXT_HIGHLIGHT("Tokkul", "bb636363")
@@ -463,10 +463,10 @@ textAccent = 2; \
 }
 
 #define BONES { \
-    color = "bbcccccc"; \
+    color = "bbffffff"; \
     textAccent = 2; \
     showLootBeam = false; \
-	menuTextColor = "bbcccccc"; \
+	menuTextColor = "bbeeeeee"; \
 	textAccentColor = "99000000"; \
 }
 
@@ -720,6 +720,9 @@ UNIQUE_M_TIER("Magic longbow (u)")
 
 // Slayer Uniques
 
+UNIQUE_C_TIER("Alchemist's signet")
+UNIQUE_C_TIER("Broken antler")
+UNIQUE_A_TIER("Antler guard")	
 UNIQUE_C_TIER("Ancient page")
 UNIQUE_B_TIER("Chewed bones")
 UNIQUE_A_TIER("Jar of*")
